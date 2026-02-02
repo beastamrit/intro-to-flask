@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action ="/getWeather" method="POST">
+        Location
+        <input type="text" name="city"></br>
+        <button type="submit" value="submit">Submit</button>
+    </form>
+    {% if data and data.country_code and data.temp %}
+    <h1>
+        {{data.location}}
+    </h1>
+    <p>The Country code is {{data.country_code}}</p>
+    <p>
+        The tempreture is {{data.temp}}
+    </p>
+    {%endif%}
+</body>
+</html>
